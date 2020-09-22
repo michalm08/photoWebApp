@@ -1,4 +1,4 @@
-﻿function dodaj(number) {
+function dodaj(number) {
 
 
 	fetch('https://picsum.photos/v2/list')
@@ -12,14 +12,29 @@
   var textnode = document.createTextNode("image");
   newItem.appendChild(textnode);
   newItem.src = x;
-  newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;"
+
+  
   var list = document.getElementById("myList");
 	
-  setTimeout(function(){ list.insertBefore(newItem, list.childNodes[0]); }, 200);
+  list.insertBefore(newItem, list.childNodes[0]); 
+  newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px; border-radius: 8px; opacity: 0.0;"
+
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.0; "}, 300);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.2; "}, 350);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.3; "}, 390);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.4; "}, 400);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.5; "}, 500);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.6; "}, 700);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.7; "}, 900);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.8; "}, 1100);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 0.9; "}, 1300);
+  setTimeout(function(){ newItem.style="width:300px; margin-bottom: 100px;margin-right: 30px;border-radius: 8px; opacity: 1; "}, 1500);
   
 })
 
 }
+
+
 
 
 
@@ -40,9 +55,9 @@ function klik() {
 	action();
 }
 
-setTimeout(function(){ dodaj(0); }, 300);
-setTimeout(function(){ dodaj(1); },600);
-setTimeout(function(){ dodaj(2); }, 900);
+dodaj(0);
+dodaj(1);
+dodaj(2);
 
 
 
@@ -57,10 +72,10 @@ function action(){
       a=0
 
 
-
-	setTimeout(function(){ dodaj(a+2); }, 300);
-	setTimeout(function(){ dodaj(a+1); },600);
-	setTimeout(function(){ dodaj(a); }, 900);
+  dodaj(a+2)
+  setTimeout(function(){ dodaj(a+1)}, 1);
+  setTimeout(function(){ dodaj(a)}, 1);
+  
 
 	nextLine();
 }
