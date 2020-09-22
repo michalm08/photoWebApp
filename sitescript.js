@@ -58,12 +58,10 @@ function action(){
 
 
 
-	setTimeout(function(){ dodaj(a+2); }, 500);
-	setTimeout(function(){ dodaj(a+1); },1000);
-	setTimeout(function(){ dodaj(a); }, 1500);
-	//dodaj(a+2);
-	//dodaj(a+1);
-	//dodaj(a);
+	setTimeout(function(){ dodaj(a+2); }, 300);
+	setTimeout(function(){ dodaj(a+1); },600);
+	setTimeout(function(){ dodaj(a); }, 900);
+
 	nextLine();
 }
 
